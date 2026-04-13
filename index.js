@@ -1,7 +1,7 @@
 require('dotenv').config();
 const fs = require('fs');
 const { Resend } = require('resend');
-const key = process.env.Resend_key;
+const key = process.env.RESEND_KEY;
 
 // Load JSON
 let bangla = JSON.parse(fs.readFileSync("json/bangla.json", "utf-8"));
