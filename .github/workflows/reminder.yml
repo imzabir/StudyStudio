@@ -24,4 +24,4 @@ jobs:
       - name: Run script
         run: node index.js
         env:
-          Resend_key: ${{ secrets.RESEND_KEY }}
+          RESEND_KEY: ${{ secrets.RESEND_KEY }}
