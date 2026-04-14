@@ -2,7 +2,7 @@ name: Daily Reminder
 
 on:
   schedule:
-    - cron: '30 12 * * *'  # 6:30 PM Bangladesh (UTC+6 → 12:30 UTC)
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
