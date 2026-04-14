@@ -6,7 +6,8 @@ const { Resend } = require('resend');
 const key = process.env.RESEND_KEY;
 const resend = new Resend(key);
 
-// ---------- SMART TIME CHECK ----------
+
+// ---------- SMART TIME CHECK ---------
 function shouldSendNow() {
   const now = new Date();
 
