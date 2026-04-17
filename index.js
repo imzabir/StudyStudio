@@ -1,6 +1,5 @@
 require("dotenv").config();
 const fs = require("fs");
-const path = require("path")
 const { Resend } = require("resend");
 const scheduledAt = new Date(new Date().setHours(18, 30, 0, 0)).toISOString();
 const resend = new Resend(process.env.RESEND_KEY);
@@ -8,7 +7,7 @@ const resend = new Resend(process.env.RESEND_KEY);
 // ---------- SAFE JSON LOADER ----------
 function loadJSON(file) {
     try {
-        return JSON.parse(fs.readFileSync(path.join(__dirname, file), "utf-8"));
+        return JSON.parse(fs.readFileSync(file), "utf-8");
     } catch (err) {
         console.error(`❌ Failed to load ${file}`, err.message);
         return [];
